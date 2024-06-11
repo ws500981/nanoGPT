@@ -6,10 +6,7 @@ tiktoken
 # nanogpt
 - This repo aims to build a small-scale custom GPT following the lecture from [Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY).
 - Data: (Tiny Shakespeare)[https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt]
-- Components: essentially the decoder-only transformer architecture in (Attention Is All You Need)[https://arxiv.org/abs/1706.03762]
-<p align="center">
-  <img src="transformer.png" alt="Transformer Architecture">
-</p>
+- Components: essentially the decoder-only transformer architecture in (Attention Is All You Need)[https://arxiv.org/abs/1706.03762] ![Transformer Architecture](transformer.png)
 - 1. Tokenization/Embedding: text to tensor --> experimented with 3 different tokenizers: simple character tokenizer, sentencepiece tokenizer, and tiktoken tokenizer
   2. Positional encoding
   3. Self-attention with residual connection
