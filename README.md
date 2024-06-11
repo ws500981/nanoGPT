@@ -7,11 +7,12 @@ tiktoken
 - This repo aims to build a small-scale custom GPT following the lecture from [Andrej Karpathy](https://www.youtube.com/watch?v=kCc8FmEb1nY).
 - Data: (Tiny Shakespeare)[https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt]
 - Components: essentially the decoder-only transformer architecture in (Attention Is All You Need)[https://arxiv.org/abs/1706.03762] ![Transformer Architecture](transformer.png)
-- 1. Tokenization: text to tensor --> experimented with 3 different tokenizers: simple character tokenizer, sentencepiece tokenizer, and tiktoken tokenizer
-  2. Self-attention with positional encoding
-  3. Multi-head self-attention
-  4. FeedForward Network to learn non-linearity
-  5. LayerNorm and Dropout as regularization
+- 1. Tokenization/Embedding: text to tensor --> experimented with 3 different tokenizers: simple character tokenizer, sentencepiece tokenizer, and tiktoken tokenizer
+  2. Positional encoding
+  3. Self-attention
+  4. Multi-head self-attention
+  5. FeedForward Network to learn non-linearity
+  6. LayerNorm and Dropout as regularization
 
 # Comparison among the tokenizers
 - Simple character tokenizer (tokenizer1) had the lowest loss, followed by sentencepiece (tokenizer2), and finally tiktoken (tokenizer3). However, these losses may not be comparable due to different vocabulary sizes (tokenizer1: 65, tokenizer2: 1000, tokenizer3: 100277). On average, $Pr(next\_token|current\_context) = 1/vocab\_size$. Therefore, with a smaller vocabulary size, we expect a smaller loss.
